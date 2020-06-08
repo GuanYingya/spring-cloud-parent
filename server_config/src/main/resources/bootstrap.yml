@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #uri: https://github.com/forezp/SpringcloudConfig/
+          uri: https://github.com/GuanYingya/spring-cloud-parent.git
+          #配置Git仓库位置
+          searchPaths: '{application}'
+          #spring_cloud_in_action/config-repo 配置仓库路径下的相对搜索位置，可以配置多个
+          username: Guanyingya
+          #访问Git仓库的用户名
+          password: 315306710@qq.com
+      #访问Git仓库的用户名密码
+      label: master
+
+
+
+
+server:
+  port: 9200
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
